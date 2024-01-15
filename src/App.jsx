@@ -4,7 +4,8 @@ import PublicContent from "./components/PublicContent"
 import { useEffect, useState } from "react"
 function App() {
   const [isAuth, setIsAuth] = useState(false)
-  const [user, setUser] = useState()
+  const [user, setUser] = useState(JSON.parse(localStorage.getItem("user")
+    ))
   useEffect(()=>{  
     if(user){
       setIsAuth(true)
